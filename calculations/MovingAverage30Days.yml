@@ -1,0 +1,13 @@
+unique_name: MovingAverage30Days
+object_type: metric_calc
+label: MovingAverage30Days
+expression: |-
+  Avg(
+    [Time].[CY Time].CurrentMember.Lag(29)
+    :
+    [Time].[CY Time].CurrentMember,
+    [Measures].[TotalSaleAmount]
+    )
+format: $#,##0.00
+is_hidden: false
+mdx_aggregate_function: SUM

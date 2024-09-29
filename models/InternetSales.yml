@@ -16,6 +16,7 @@ metrics:
   - unique_name: GrowthComparedToPrevious
   - unique_name: PreviousYearSalesAmount
   - unique_name: GrowthComparedToPreviousYear
+  - unique_name: MovingAverage30Days
 relationships:
   - unique_name: factsales_saledate_to_Time_CY Date
     from:
