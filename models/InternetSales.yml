@@ -12,7 +12,8 @@ metrics:
     folder: Order Metrics
   - unique_name: TotalProfit
     folder: Order Metrics
-  - unique_name: PreviousYearSaleAmount
+  - unique_name: PreviousSaleAmount
+  - unique_name: GrowthComparedToPrevious
 relationships:
   - unique_name: factsales_saledate_to_Time_CY Date
     from:

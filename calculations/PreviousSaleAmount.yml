@@ -1,0 +1,8 @@
+unique_name: PreviousSaleAmount
+object_type: metric_calc
+label: Previous Year Sale Amount
+expression: |-
+  ([Time].[CY Time].CurrentMember.PrevMember, [Measures].[TotalSaleAmount])
+format: $#,##0.00
+is_hidden: false
+mdx_aggregate_function: SUM

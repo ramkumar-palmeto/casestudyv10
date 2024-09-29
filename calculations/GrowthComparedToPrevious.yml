@@ -1,0 +1,10 @@
+unique_name: GrowthComparedToPrevious
+object_type: metric_calc
+label: GrowthComparedToPrevious
+expression: |-
+  ([Time].[CY Time].CurrentMember.PrevMember, [Measures].[TotalSaleAmount])
+  -
+  [Measures].PreviousSaleAmount
+format: $#,##0.00
+is_hidden: false
+mdx_aggregate_function: SUM
