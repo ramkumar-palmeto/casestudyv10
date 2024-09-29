@@ -4,7 +4,7 @@ label: GrowthComparedToPrevious
 expression: |-
   ([Time].[CY Time].CurrentMember.PrevMember, [Measures].[TotalSaleAmount])
   -
-  [Measures].PreviousSaleAmount
+  ([Time].[CY Time].CurrentMember, [Measures].[TotalSaleAmount])
 format: $#,##0.00
 is_hidden: false
 mdx_aggregate_function: SUM
