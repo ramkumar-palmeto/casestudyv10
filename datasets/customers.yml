@@ -1,0 +1,26 @@
+unique_name: customers
+object_type: dataset
+label: customers
+columns:
+  - name: customerid
+    data_type: int
+  - name: fullname
+    data_type: string
+  - name: fname
+    data_type: string
+  - name: mname
+    data_type: string
+  - name: lname
+    data_type: string
+  - name: locationid
+    data_type: int
+  - name: creditlimit
+    data_type: int
+  - name: activestatus
+    data_type: boolean
+  - name: customerstatus
+    data_type: string
+  - name: customertype
+    data_type: string
+connection_id: con_postgres_training
+table: customers

@@ -1,0 +1,12 @@
+unique_name: salesreasons
+object_type: dataset
+label: salesreasons
+columns:
+  - name: salesreasonid
+    data_type: int
+  - name: salesreasonname
+    data_type: string
+  - name: salesreasontype
+    data_type: string
+connection_id: con_postgres_training
+table: salesreasons

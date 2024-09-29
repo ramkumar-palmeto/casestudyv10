@@ -1,0 +1,10 @@
+unique_name: productcategories
+object_type: dataset
+label: productcategories
+columns:
+  - name: productcategoryid
+    data_type: int
+  - name: productcategoryname
+    data_type: string
+connection_id: con_postgres_training
+table: productcategories
