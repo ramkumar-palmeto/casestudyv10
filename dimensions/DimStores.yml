@@ -1,0 +1,32 @@
+unique_name: DimStores
+object_type: dimension
+label: Stores
+hierarchies:
+  - unique_name: DimStores Hierarchy
+    label: Stores
+    filter_empty: 'yes'
+    levels:
+      - unique_name: Store
+level_attributes:
+  - unique_name: Store
+    label: Store
+    contains_unique_names: false
+    dataset: stores
+    is_unique_key: false
+    key_columns:
+      - storeid
+    name_column: storename
+
+relationships:
+  - unique_name: stores_locationid_to_DimGeography_Location Id
+    from:
+      dataset: stores
+      hierarchy: DimStores Hierarchy
+      join_columns:
+        - locationid
+      level: Store
+    to:
+      dimension: DimGeography
+      level: Location Id
+    type: embedded
+type: standard
