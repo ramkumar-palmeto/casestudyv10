@@ -1,0 +1,73 @@
+unique_name: DimCustomers
+object_type: dimension
+label: Customers
+hierarchies:
+  - unique_name: CustomersHierarchy
+    label: Customers
+    levels:
+      - unique_name: Customer Type
+      - unique_name: Customer Status
+      - unique_name: Customer Name
+        secondary_attributes:
+          - unique_name: fname
+            label: fname
+            contains_unique_names: false
+            dataset: customers
+            is_unique_key: false
+            key_columns:
+              - fname
+            name_column: fname
+          - unique_name: mname
+            label: mname
+            contains_unique_names: false
+            dataset: customers
+            is_unique_key: false
+            key_columns:
+              - mname
+            name_column: mname
+          - unique_name: lname
+            label: lname
+            contains_unique_names: false
+            dataset: customers
+            is_unique_key: false
+            key_columns:
+              - lname
+            name_column: lname
+level_attributes:
+  - unique_name: Customer Type
+    label: Customer Type
+    contains_unique_names: false
+    dataset: customers
+    is_unique_key: false
+    key_columns:
+      - customertype
+    name_column: customertype
+  - unique_name: Customer Status
+    label: Customer Status
+    contains_unique_names: false
+    dataset: customers
+    is_unique_key: false
+    key_columns:
+      - customerstatus
+    name_column: customerstatus
+  - unique_name: Customer Name
+    label: Customer Name
+    contains_unique_names: false
+    dataset: customers
+    is_unique_key: false
+    key_columns:
+      - customerid
+    name_column: fullname
+relationships:
+  - unique_name: customers_locationid_to_geography_Location Id
+    from:
+      dataset: customers
+      hierarchy: CustomersHierarchy
+      join_columns:
+        - locationid
+      level: customers_empty_attr
+    to:
+      dimension: geography
+      level: Location Id
+    type: embedded
+type: standard
