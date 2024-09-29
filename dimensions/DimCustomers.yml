@@ -59,15 +59,16 @@ level_attributes:
       - customerid
     name_column: fullname
 relationships:
-  - unique_name: customers_locationid_to_geography_Location Id
+  - unique_name: customers_locationid_to_DimGeography_Location Id
     from:
       dataset: customers
       hierarchy: CustomersHierarchy
       join_columns:
         - locationid
-      level: customers_empty_attr
+      level: Customer Type
     to:
-      dimension: geography
+      dimension: DimGeography
       level: Location Id
     type: embedded
+
 type: standard

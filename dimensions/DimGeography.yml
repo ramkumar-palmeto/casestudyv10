@@ -1,4 +1,4 @@
-unique_name: geography
+unique_name: DimGeography
 object_type: dimension
 label: geography
 hierarchies:
@@ -62,5 +62,15 @@ level_attributes:
     key_columns:
       - locationid
     name_column: locationid
-
+relationships:
+  - unique_name: locations_state_to_state_map_row_security
+    from:
+      dataset: locations
+      hierarchy: Geography
+      join_columns:
+        - state
+      level: Country
+    to:
+      row_security: state_map_row_security
+    type: embedded
 type: standard

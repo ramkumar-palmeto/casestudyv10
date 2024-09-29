@@ -1,0 +1,18 @@
+unique_name: DimEmployees
+object_type: dimension
+label: Employees
+hierarchies:
+  - unique_name: DimEmployees Hierarchy
+    label: Employees
+    levels:
+      - unique_name: Employee Name
+level_attributes:
+  - unique_name: Employee Name
+    label: Employee Name
+    contains_unique_names: false
+    dataset: employees
+    is_unique_key: false
+    key_columns:
+      - employeeid
+    name_column: fullname
+type: standard
