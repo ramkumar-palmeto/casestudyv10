@@ -1,0 +1,71 @@
+unique_name: InternetSales
+object_type: model
+label: InternetSales
+metrics:
+  - unique_name: TotalUnits
+    folder: Order Metrics
+  - unique_name: TotalSaleAmount
+    folder: Order Metrics
+  - unique_name: TotalProductionCost
+    folder: Order Metrics
+  - unique_name: SaleCount
+    folder: Order Metrics
+  - unique_name: TotalProfit
+    folder: Order Metrics
+relationships:
+  - unique_name: factsales_saledate_to_Time_CY Date
+    from:
+      dataset: factsales
+      join_columns:
+        - saledate
+    to:
+      dimension: Time
+      level: CY Date
+  - unique_name: factsales_salesreasonid_to_DimSalesReasons_Reason Id
+    from:
+      dataset: factsales
+      join_columns:
+        - salesreasonid
+    to:
+      dimension: DimSalesReasons
+      level: Reason Id
+  - unique_name: factsales_productid_to_DimProducts_Product
+    from:
+      dataset: factsales
+      join_columns:
+        - productid
+    to:
+      dimension: DimProducts
+      level: Product
+  - unique_name: factsales_productid_to_DimProducts_Product ID
+    from:
+      dataset: factsales
+      join_columns:
+        - productid
+    to:
+      dimension: DimProducts
+      level: Product ID
+  - unique_name: factsales_employeeid_to_DimEmployees_Employee Name
+    from:
+      dataset: factsales
+      join_columns:
+        - employeeid
+    to:
+      dimension: DimEmployees
+      level: Employee Name
+  - unique_name: factsales_customerid_to_DimCustomers_Customer Name
+    from:
+      dataset: factsales
+      join_columns:
+        - customerid
+    to:
+      dimension: DimCustomers
+      level: Customer Name
+  - unique_name: factsales_storeid_to_DimStores_Store
+    from:
+      dataset: factsales
+      join_columns:
+        - storeid
+    to:
+      dimension: DimStores
+      level: Store

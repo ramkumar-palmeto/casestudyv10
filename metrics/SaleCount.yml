@@ -1,0 +1,7 @@
+unique_name: SaleCount
+object_type: metric
+label: Sale Count
+calculation_method: count non-null
+column: saleid
+dataset: factsales
+format: general number

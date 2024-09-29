@@ -22,5 +22,8 @@ columns:
     data_type: int
   - name: productcost
     data_type: int
+  - name: Profit
+    data_type: int
+    sql: saleamount - productcost
 connection_id: con_postgres_training
 table: factsales
