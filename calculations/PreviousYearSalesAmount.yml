@@ -3,7 +3,7 @@ object_type: metric_calc
 label: PreviousYearSalesAmount
 expression: |-
   (ParallelPeriod(
-     [Time].[CY Time].[Year],
+     [Time].[CY Time].[CY Year],
      1,
      [Time].[CY Time].CurrentMember),
      [Measures].[TotalSaleAmount]
