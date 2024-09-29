@@ -10,4 +10,3 @@ expression: |-
     )
 format: $#,##0.00
 is_hidden: false
-mdx_aggregate_function: SUM
